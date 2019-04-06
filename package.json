@@ -1,8 +1,8 @@
 {
-  "name": "minecraft-player-counter",
+  "name": "galaxyreborn-discord-bot",
   "version": "1.0.0",
   "author": "",
-  "description": "Player Counter in Discord",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^11.4.2",
