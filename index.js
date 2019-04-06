@@ -17,7 +17,7 @@ bot.on("ready", async () => {
         var mcPort = 25574;
         var userCount = 0;
 
-        const discordUsers = bot.guild.memberCount;
+        const discordUsers = guild.memberCount;
         totalDiscordUsers.setName("Total members: " + discordUsers)
             // .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
             .catch(console.error);
