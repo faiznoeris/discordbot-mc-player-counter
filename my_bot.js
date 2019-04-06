@@ -17,7 +17,7 @@ bot.on("ready", async () => {
         var userCount = 0;
 
         var url = 'http://mcapi.us/server/status?ip=' + mcIP + '&port=' + mcPort;
-        return request(url, function(err, response, body) {
+        request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
                 return message.reply('Error getting Minecraft server status...');
