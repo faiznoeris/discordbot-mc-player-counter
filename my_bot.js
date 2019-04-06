@@ -30,6 +30,10 @@ bot.on("ready", async () => {
                     totalUsers.setName("Total Players: " + userCount)
                         .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
                         .catch(console.error);
+                } else {
+                    totalUsers.setName("OFFLINE")
+                        .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
+                        .catch(console.error);
                 }
             } else {
                 totalUsers.setName("OFFLINE")
