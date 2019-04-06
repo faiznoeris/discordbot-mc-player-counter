@@ -25,13 +25,9 @@ bot.on("ready", async () => {
             body = JSON.parse(body);
             console.log(body);
             if(body.online) {
-                if(body.players.now) {
+                if(body.players) {
                     userCount = body.players.now;
                     totalUsers.setName("Total Players: " + userCount)
-                        .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
-                        .catch(console.error);
-                } else {
-                    totalUsers.setName("OFFLINE")
                         .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
                         .catch(console.error);
                 }
