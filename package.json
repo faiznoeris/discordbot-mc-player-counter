@@ -1,0 +1,16 @@
+{
+  "name": "minecraft-player-counter",
+  "version": "1.0.0",
+  "author": "Faiz Noeris", 
+  "description": "Player Counter in Discord",
+  "main": "my_bot.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
