@@ -26,8 +26,6 @@ bot.on("ready", async () => {
             if(body.online) {
                 if(body.players.now) {
                     userCount = body.players.now;
-                    console.log(body);
-                    console.log(userCount);
                     totalUsers.setName("Total Players: " + userCount)
                         .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
                         .catch(console.error);
@@ -38,5 +36,5 @@ bot.on("ready", async () => {
                     .catch(console.error);
             }
         });
-    }, 5000);
+    }, 30000);
 });
