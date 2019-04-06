@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "",
   "description": "Player Counter in Discord",
-  "main": "my_bot.js",
+  "main": "index.js",
   "dependencies": {
     "discord.js": "^11.4.2",
     "request": "^2.88.0"
