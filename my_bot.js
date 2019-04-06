@@ -23,6 +23,7 @@ bot.on("ready", async () => {
                 return message.reply('Error getting Minecraft server status...');
             }
             body = JSON.parse(body);
+            console.log(body);
             if(body.online) {
                 if(body.players.now) {
                     userCount = body.players.now;
