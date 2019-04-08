@@ -13,8 +13,6 @@ bot.on("ready", async () => {
 
     setInterval(function() {
         // console.log('Getting stats update..')
-        var mcIP = '139.99.70.135';
-        var mcPort = 25574;
         var userCount = 0;
 
         const discordUsers = guild.memberCount;
@@ -22,7 +20,9 @@ bot.on("ready", async () => {
             // .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
             .catch(console.error);
 
-        var url = 'http://mcapi.us/server/status?ip=' + mcIP + '&port=' + mcPort;
+        var url = process.env.serverport
+            ? 'http://mcapi.us/server/status?ip=' + process.env.serverip + '&port=' + process.env.serverport;
+            : 'http://mcapi.us/server/status?ip=' + process.env.serverip;
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
