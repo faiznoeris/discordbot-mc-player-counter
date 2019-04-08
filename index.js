@@ -20,9 +20,11 @@ bot.on("ready", async () => {
             // .then(newChannel => console.log(`Stat channel renamed to: ${newChannel.name}`))
             .catch(console.error);
 
-        var url = process.env.serverport
-            ? 'http://mcapi.us/server/status?ip=' + process.env.serverip + '&port=' + process.env.serverport;
-            : 'http://mcapi.us/server/status?ip=' + process.env.serverip;
+        let url = 'http://mcapi.us/server/status?ip=' + process.env.serverip + '&port=' + process.env.serverport;
+        if (!process.env.serverport) {
+            url = 'http://mcapi.us/server/status?ip=' + process.env.serverip;
+        }
+
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
